@@ -15,7 +15,7 @@
                
                 <div class="row mb-3">
                     <label for="example-text-input" class="col-sm-2 col-form-label">About Multi Image</label>
-                    <div class="col-sm-10">
+                    <div class="col-sm-6">
                         <input class="form-control" type="file" name="multi_image[]"  id="image" multiple="">
                     </div>
                 </div>
