@@ -11,7 +11,7 @@ use App\Http\Controllers\Home\AboutController;
 Route::get('/', function () {
     return view('frontend.index');
 });
-//admin All Route
+//Admin All Route
 Route::controller(AdminController::class)->group(function(){ 
     Route::get('/admin/logout', 'destroy')->name('admin.logout');
     Route::get('/admin/profile', 'profile')->name('admin.profile');
@@ -21,18 +21,24 @@ Route::controller(AdminController::class)->group(function(){
     Route::post('/update/password', 'UpdatePassword')->name('update.password');
 
 });
-//Home Slide  
+// Admin Home Slide  
 Route::controller(HomeSliderController::class)->group(function(){  
     Route::get('/home/slide', 'HomeSlider')->name('home.slide');
     Route::post('/update/slider', 'UpdateSlider')->name('update.slider');
+    
 });
-//About Page All Route
+//Admin About Page All Route
 Route::controller(AboutController::class)->group(function(){  
     Route::get('/about/page', 'AboutPage')->name('about.page');
     Route::post('/about/update', 'AboutUpdate')->name('about.update');
     Route::get('/about', 'HomeAbout')->name('home.about');
+    Route::get('/about/multi/image', 'AboutMultiImage')->name('about.multi.image');
+    Route::post('/store/multi/image', 'StoreMultiImage')->name('store.multi.image');
+    Route::get('/all/multi/image', 'AllMultiImage')->name('all.multi.image');
 
 
+
+ 
    
 });
 
