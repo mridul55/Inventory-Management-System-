@@ -48,7 +48,7 @@ class PortfolioController extends Controller
                  'portfolio_description' => $request->portfolio_description,
        
                  'portfolio_image' => $save_url,
-                 'created_at' => Carbon::now(),updated_at
+                 'created_at' => Carbon::now(),
 
             ]);
             $notification = array(
@@ -127,6 +127,13 @@ class PortfolioController extends Controller
 
         $portfoliodetail = Portfolio::findOrFail($id);
         return view('frontend.portfolio_details', compact('portfoliodetail'));
+
+    }
+
+    public function HomePortfolio(){
+
+        $portfolio = Portfolio::latest()->get();
+        return view('frontend.portfolio',compact('portfolio'));
 
     }
 }

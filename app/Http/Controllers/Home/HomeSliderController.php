@@ -55,4 +55,8 @@ class HomeSliderController extends Controller
            return redirect()->back()->with($notification);
         }
     }
+
+    public function HomeMain(){
+        return view('frontend.index');
+    }
 }
