@@ -31,7 +31,17 @@ class BlogCategoryController extends Controller
             'blog_category.required' => 'Category Name is Required',
 
          ]);
-         BlogCategory::insert([
+        //  $blog = new BlogCategory();//$blog = BlogCategory::find($id);
+        //  $blog->blog_category = $request->blog_category;
+        //  $blog->created_at = Carbon::now();
+        //  $blog->save();
+    //      BlogCategory::insert([
+    //         'blog_category' => $request->blog_category,
+    //         'created_at' => Carbon::now(),
+
+    //    ]);
+                                         //BlogCategory::create($request->all());
+         BlogCategory::create([
             'blog_category' => $request->blog_category,
             'created_at' => Carbon::now(),
 
