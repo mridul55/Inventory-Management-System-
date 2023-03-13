@@ -23,22 +23,20 @@ class BlogCategoryController extends Controller
     public function StoreBlogCategory(Request $request ){
 
         $request->validate([ //Default Message for field is required
-
             'blog_category' => 'required'
-
          ],[
               //Custome Message Portfolio Name is Required
             'blog_category.required' => 'Category Name is Required',
 
-         ]);
-        //  $blog = new BlogCategory();//$blog = BlogCategory::find($id);
+          ]);
+        //  $blog = new BlogCategory();    //$blog = BlogCategory::find($id); update ar jonno
         //  $blog->blog_category = $request->blog_category;
         //  $blog->created_at = Carbon::now();
         //  $blog->save();
+
     //      BlogCategory::insert([
     //         'blog_category' => $request->blog_category,
     //         'created_at' => Carbon::now(),
-
     //    ]);
                                          //BlogCategory::create($request->all());
          BlogCategory::create([
