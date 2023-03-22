@@ -79,7 +79,7 @@ Contact|Learing Site
                 <div class="col-lg-4 col-md-6">
                     <div class="contact__info">
                         <div class="contact__info__icon">
-                            <img src="{{asset('frontend/assets/img/icons/contact_icon01.png')  }}" alt="">
+                            <img src="{{ asset('frontend/assets/img/icons/contact_icon01.png')  }}" alt="">
                         </div>
                         <div class="contact__info__content">
                             <h4 class="title">address line</h4>
@@ -90,7 +90,7 @@ Contact|Learing Site
                 <div class="col-lg-4 col-md-6">
                     <div class="contact__info">
                         <div class="contact__info__icon">
-                            <img src="{{asset('frontend/assets/img/icons/contact_icon02.png')  }}" alt="">
+                            <img src="{{ asset('frontend/assets/img/icons/contact_icon02.png')  }}" alt="">
                         </div>
                         <div class="contact__info__content">
                             <h4 class="title">Phone Number</h4>
@@ -102,7 +102,7 @@ Contact|Learing Site
                 <div class="col-lg-4 col-md-6">
                     <div class="contact__info">
                         <div class="contact__info__icon">
-                            <img src="{{asset('frontend/assets/img/icons/contact_icon03.png')  }}" alt="">
+                            <img src="{{ asset('frontend/assets/img/icons/contact_icon03.png')  }}" alt="">
                         </div>
                         <div class="contact__info__content">
                             <h4 class="title">Mail Address</h4>

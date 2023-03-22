@@ -8,11 +8,12 @@ use App\Models\Blog;
 use App\Models\BlogCategory;
 use Image;
 use Illuminate\Support\Carbon;
+use Auth;
 
 class BlogController extends Controller
 {
     public function AllBlog(){
-
+        
         $blog_all = Blog::latest()->get();
         $categories =BlogCategory::orderby('blog_category','ASC')->get();
         return view('admin.blog.blogs_all',compact('blog_all','categories'));
@@ -138,6 +139,7 @@ class BlogController extends Controller
         $allblogs = Blog::latest()->limit(5)->get();
         $blogs = Blog::findOrFail($id);
         $categories =BlogCategory::orderby('blog_category','ASC')->get();
+        
         return view('frontend.blog_details', compact('blogs','allblogs','categories'));
     }
 
@@ -153,6 +155,7 @@ class BlogController extends Controller
 
     public function HomeBlog(){
         $categories =BlogCategory::orderby('blog_category','ASC')->get();
+        //dd($categories);
         $allblogs = Blog::latest()->paginate(3);
         return view('frontend.blog',compact('allblogs','categories'));
     }
